@@ -1,20 +1,17 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../actions'
+import PropTypes from 'prop-types'
 
-const Footer = () => (
+const Footer = ({ onClick, isShowingCompletedTodos }) => (
   <div>
-    <span>Show: </span>
-    <FilterLink filter={VisibilityFilters.SHOW_ALL}>
-      All
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
-      Active
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
-      Completed
-    </FilterLink>
+    <button onClick={() => onClick(!isShowingCompletedTodos)}>
+      {isShowingCompletedTodos ? 'Hide' : 'Show'} Completed Tasks
+    </button>
   </div>
 )
+
+Footer.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  isShowingCompletedTodos: PropTypes.bool.isRequired
+}
 
 export default Footer
