@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import { isNewlyAdded } from './NewTodoList'
 import TodoList from '../components/TodoList'
+import { todoListHeadingStyle } from '../styles'
 
 const getActiveTodos = (todos) => {
   return todos
@@ -20,7 +21,7 @@ const mapDispatchToProps = dispatch => ({
 
 const VisibleTodoList = (props) => (
   <div>
-    <h3>All Tasks</h3>
+    <h3 style={todoListHeadingStyle}>All Tasks</h3>
     <TodoList {...props} />
   </div>
 )

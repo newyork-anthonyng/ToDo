@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { toggleCompletedButtonStyle } from '../styles'
 
 const Footer = ({ onClick, isShowingCompletedTodos }) => (
-  <div>
-    <button onClick={() => onClick(!isShowingCompletedTodos)}>
+    <button
+      style={toggleCompletedButtonStyle}
+      onClick={() => onClick(!isShowingCompletedTodos)}
+    >
       {isShowingCompletedTodos ? 'Hide' : 'Show'} Completed Tasks
     </button>
-  </div>
 )
 
 Footer.propTypes = {

@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
+import { todoListHeadingStyle } from '../styles'
 
 // Return true if todo item was added within past five minutes
 const NEWLY_ADDED_TIME_INTERVAL = 5 * 60 * 1000;
@@ -22,7 +23,7 @@ const NewTodoList = (props) => {
 
     return (
         <div>
-            <h3>New Tasks</h3>
+            <h3 style={todoListHeadingStyle}>New Tasks</h3>
             <TodoList {...props} />
         </div>
     )
