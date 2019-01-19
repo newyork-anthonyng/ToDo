@@ -5,7 +5,7 @@ import TodoList from '../components/TodoList'
 
 // Return true if todo item was added within past five minutes
 const NEWLY_ADDED_TIME_INTERVAL = 5 * 60 * 1000;
-const isNewlyAdded = todo => {
+export const isNewlyAdded = todo => {
     return (Date.now() - todo.dateAdded) < NEWLY_ADDED_TIME_INTERVAL;
 };
 
