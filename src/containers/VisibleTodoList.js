@@ -1,3 +1,4 @@
+import React from 'react'
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
@@ -24,7 +25,14 @@ const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id))
 })
 
+const VisibleTodoList = (props) => (
+  <div>
+    <h3>All Tasks</h3>
+    <TodoList {...props} />
+  </div>
+)
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList)
+)(VisibleTodoList)
