@@ -1,3 +1,17 @@
+# Anthony's Notes
+Things I did
+* Added keyboard functionality to toggle todo item (`tab` to a to-do item, and press `SPACE` or `ENTER`)
+* Added barebones styling
+* Added basic functionality from Invision mock
+
+Things I would have liked to do
+* Add more unit tests
+* Spend more time on styling
+* Add better keyboard functionality for keyboard users (users should be able to use arrow keys to navigate from one task to another)
+* Add UI for setting a due date for a todo item (possibly using [`<input type="date">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date))
+* Persist todo data through browser refresh
+    * Data could be saved to a backend database, or even simply to browser localStorage/cache
+
 # Redux Todos Example
 
 This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app), which provides a simple way to start React projects with no build configuration needed.
